@@ -1,0 +1,39 @@
+@use "../custom"as *;
+
+.services {
+  position: relative;
+  padding: 1rem 0;
+
+  &-content {
+    padding: 1rem;
+
+    p {
+      font-size: 0.8rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+      }
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      color: $primary;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .border-right {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.1rem;
+      height: 100%;
+      background-color: $gray-300;
+      top: 0;
+      left: calc(100% + 0.80rem);
+    }
+  }
+}

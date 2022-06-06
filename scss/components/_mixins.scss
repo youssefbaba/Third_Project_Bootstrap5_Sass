@@ -1,0 +1,33 @@
+@use "../custom"as *;
+
+// Gradient Mixin
+@mixin gradient-mixin {
+	background: linear-gradient(to right,
+			rgba($primary, 0.95),
+			rgba($secondary, 0.95));
+}
+
+// Absolute Center
+@mixin absolute-center-mixin {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// Animation 
+@mixin keyframe-mixin ($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+// Transition
+@mixin transition-mixin($properties ...) {
+	-webkit-transition: $properties;
+	transition: $properties;
+}

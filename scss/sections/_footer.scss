@@ -1,0 +1,115 @@
+@use "../custom"as *;
+@use "../components/mixins"as *;
+
+.footer {
+  .contact {
+    background-color: $footer;
+
+    &-box {
+      &-icon {
+        color: $primary;
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+
+        @include media-breakpoint-up(sm) {
+          font-size: 3rem;
+        }
+      }
+
+      &-info {
+        padding: 0.4rem;
+        font-weight: 600;
+
+        a {
+          font-size: 1rem;
+
+          &:hover {
+            color: $primary !important;
+          }
+
+          @include media-breakpoint-up(sm) {
+            font-size: 1.4rem;
+          }
+        }
+
+        span {
+          color: $gray-600;
+          font-size: 0.8rem;
+          display: block;
+
+          @include media-breakpoint-up(sm) {
+            font-size: 1rem;
+          }
+
+        }
+      }
+    }
+  }
+
+  .social-media {
+    background-color: #212121;
+
+    a {
+      i {
+        font-size: 1rem;
+
+        @include media-breakpoint-up(sm) {
+          font-size: 1.6rem;
+        }
+      }
+
+      &:hover {
+        color: $primary !important;
+      }
+    }
+  }
+
+  .company-info {
+    background-color: $footer;
+
+    h4 {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 60px;
+        height: 1px;
+        background-color: $white;
+      }
+    }
+
+    a {
+      &:hover {
+        color: $primary !important;
+      }
+    }
+  }
+
+  .copyright {
+    background-color: black;
+
+    p {
+      color: $gray-600;
+
+      a {
+        color: $gray-300 !important;
+
+        &:hover {
+          color: $primary !important;
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+
+  .back-top {
+    width: 3rem;
+    height: 3rem;
+    bottom: 1.875rem;
+    right: 1.875rem;
+    z-index: 9999;
+  }
+}

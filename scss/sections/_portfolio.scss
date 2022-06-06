@@ -1,0 +1,45 @@
+@use "../custom"as *;
+@use "../components/mixins"as *;
+
+
+.portfolio {
+  .btn {
+    text-transform: capitalize;
+  }
+
+  &-item {
+    border-top: 0.5rem solid $purple-light;
+    overflow: hidden;
+
+    &:hover {
+      .portfolio-info {
+        opacity: 1;
+        visibility: visible;
+        @include transition-mixin(all 1s ease);
+      }
+
+      img {
+        transform: scale(1.5);
+        @include transition-mixin(all 1s ease);
+      }
+    }
+  }
+
+  &-info {
+    background-color: rgba($primary, 0.75);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    .caption {
+      @include absolute-center-mixin;
+    }
+
+    h4 {
+      text-transform: uppercase;
+    }
+  }
+}

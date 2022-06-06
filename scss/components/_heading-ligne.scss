@@ -1,0 +1,20 @@
+@use "../custom"as *;
+
+.heading-ligne::before {
+  content: "";
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  background-color: $primary;
+  margin: 0 auto;
+}
+
+.heading-ligne::after {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  padding: 0.2rem;
+  display: block;
+  background-color: $primary;
+  margin: 0 auto 1rem;
+}

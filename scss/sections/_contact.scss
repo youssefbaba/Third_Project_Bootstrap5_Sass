@@ -1,0 +1,35 @@
+@use "../custom"as *;
+@use "../components/mixins"as *;
+
+.contact {
+  background-color: $gray-200;
+
+  .gradient {
+    @include gradient-mixin;
+  }
+
+  &-info {
+    padding: 3rem;
+    margin: 1rem 0;
+
+    &-list {
+      list-style: none;
+      padding-top: 0.5rem;
+      padding-left: 0.5rem;
+      margin-bottom: 0.7rem;
+
+      li::before {
+        font: var(--fa-font-solid);
+        content: "\f00c";
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .form {
+    textarea {
+      height: 250px;
+    }
+  }
+}
